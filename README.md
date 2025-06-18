@@ -1,10 +1,10 @@
-# fiap-ds-mlops-10dtsr-laptop-pricing-brl
+# Laptop Pricing Model BRL
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Model for laptop pricing prediction of used equipments.
+Model for laptop pricing prediction of used equipments in BRL currency.
 
 ## Project Organization
 
