@@ -12,6 +12,10 @@ jobs:
     name: "Notification to API Repository"
     runs-on: ubuntu-latest
 
+    env:
+      MLFLOW_TRACKING_USERNAME: ${{ secrets.MLFLOW_TRACKING_USERNAME }}
+      MLFLOW_TRACKING_PASSWORD: ${{ secrets.MLFLOW_TRACKING_PASSWORD }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,6 +30,9 @@ jobs:
 
       - name: Unit testing
         run: pytest
+
+      - name: Register Model
+        run: python models/register_model.py
      
       - name: Deploy Stage
         uses: actions/github-script@v6
